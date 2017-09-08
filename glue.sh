@@ -1,3 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
-xclip -o | python3 aestheticfy.py | xclip -selection clipboard
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+xclip -o | python3 "$DIR/aestheticfy.py" | xclip -selection clipboard
